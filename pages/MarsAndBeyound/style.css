@@ -56,7 +56,7 @@ html {
   transition-duration: 0.3s;
 }
 .btn:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -76,25 +76,27 @@ html {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.rotateTop{
+.rotateTop {
   transform: rotate(45deg);
-    transform-origin: 25%;
-
+  transform-origin: 48%;
 }
-.rotateBottom{
+.rotateBottom {
   transform: rotate(-45deg);
-    transform-origin: 25%;
-
+  transform-origin: 40%;
 }
-.btn:hover, .btn:focus, .btn:active {
+.btn:hover,
+.btn:focus,
+.btn:active {
   color: black;
 }
-.btn:hover:before, .btn:focus:before, .btn:active:before {
+.btn:hover:before,
+.btn:focus:before,
+.btn:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
 
-body{
+body {
   position: relative;
 }
 .menuBarContainer {
@@ -106,13 +108,13 @@ body{
   transform: translateX(105vw);
   height: 100vh;
   z-index: 100;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
 }
 
-.menu-mid{
+.menu-mid {
   display: flex;
   justify-content: center;
   align-items: self-end;
@@ -122,7 +124,7 @@ body{
   gap: 4vh;
 }
 
-.menu-navItems{
+.menu-navItems {
   position: relative;
   color: white;
   font-size: 4vw;
@@ -130,17 +132,17 @@ body{
   font-family: mainFont;
   font-weight: bold;
   text-transform: uppercase;
-  transition: all .4s ease-in-out;
-  border-bottom: 2px solid transparent; 
+  transition: all 0.4s ease-in-out;
+  border-bottom: 2px solid transparent;
 }
 
 .menu-navItems::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
-  height: 2px; 
+  height: 2px;
   background-color: white;
   transition: width 0.3s ease-in-out;
 }
@@ -186,12 +188,11 @@ nav {
   cursor: pointer;
 }
 
-
-
-
-
+.cancel {
+  cursor: pointer;
+}
 .stroke {
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   width: 3vw;
   height: 0.15vw;
   background: #e9e9e9;
@@ -214,7 +215,7 @@ nav {
 }
 .page1 img {
   position: absolute;
-  width:auto;
+  width: auto;
   height: 100vh;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -255,7 +256,7 @@ nav {
   flex-direction: column;
 }
 
-.page2 img{
+.page2 img {
   width: auto;
   height: 100vh;
   position: absolute;
@@ -295,7 +296,6 @@ nav {
   grid-template-columns: 50% 50%;
   background: url('/images/mars_why.jpg') no-repeat center/cover;
 }
-
 
 .marsInfoDiv {
   padding: 5vh 5vw;
@@ -451,7 +451,7 @@ nav {
 
 .stepsP {
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transform: translateY(50px);
 }
 
@@ -459,11 +459,10 @@ nav {
   cursor: pointer;
 }
 
-.stepsH1:hover+.stepsP {
+.stepsH1:hover + .stepsP {
   opacity: 100;
   transform: translateY(0px);
 }
-
 
 .page7 {
   width: 100vw;
@@ -514,7 +513,7 @@ nav {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.page8 img{
+.page8 img {
   width: auto;
   height: 100vh;
   position: absolute;
@@ -610,46 +609,39 @@ nav {
   color: rgb(189, 189, 189);
 }
 
-
-
-
 @media (max-width: 600px) {
   .menuBarContainer {
     height: auto;
     width: auto;
   }
 
-  nav{
+  nav {
     padding: 3vh 8vw;
   }
-  nav .mid{
+  nav .mid {
     display: none;
   }
-  .right{
-    gap: .9vw;
+  .right {
+    gap: 0.9vw;
   }
-  nav .right .stroke{
+  nav .right .stroke {
     width: 7vw;
-    height: .3vh;
+    height: 0.3vh;
   }
 
-
-  .menu-navItems{
+  .menu-navItems {
     font-size: 10vw;
   }
-  #topStroke{
-    width: 7vw;
-    height: .33vh;
-  }
-  nav .left img{
+
+  nav .left img {
     width: 40vw;
   }
 
-  .page1 h1{
-      font-size: 12vw;
+  .page1 h1 {
+    font-size: 12vw;
   }
-  .page1 h3{
-      font-size: 3vw;
+  .page1 h3 {
+    font-size: 3vw;
   }
   .page1 {
     position: relative;
@@ -663,160 +655,144 @@ nav {
     flex-direction: column;
   }
 
-
-  .page2 h2{
+  .page2 h2 {
     font-size: 4vw;
     line-height: 5vh;
   }
-  .page2 h3{
+  .page2 h3 {
     font-size: 4vw;
   }
 
-
-  .page3{
+  .page3 {
     grid-template-columns: 0% 100%;
     place-items: center;
   }
-  .page3 h1{
+  .page3 h1 {
     font-size: 12vw;
     text-align: center;
   }
-  .page3 #marsInfoP{
+  .page3 #marsInfoP {
     font-size: 3vw;
     text-align: center;
     margin-bottom: 5vh;
   }
 
   .page3 #marsTableRight p,
-  .page3 #marsTableLeft p{
+  .page3 #marsTableLeft p {
     font-size: 3vw;
   }
-  .page4 div h2{
+  .page4 div h2 {
     font-size: 6vw;
   }
 
   #marsTableRight span {
     font-size: 2.5vw;
   }
-  .page5{
+  .page5 {
     grid-template-columns: 72% 28%;
   }
-  .page5 div{
+  .page5 div {
     padding: 1vh 5vw;
     align-items: center;
   }
-  .page5 h1{
+  .page5 h1 {
     font-size: 13vw;
   }
-  .page5 p{
+  .page5 p {
     font-size: 4vw;
     text-align: center;
     margin-bottom: 4vh;
   }
-  .page5 button{
+  .page5 button {
     font-size: 4vw;
   }
 
-
-
-
-
-  .page6 h1{
+  .page6 h1 {
     margin-top: 20vh;
     font-size: 10vw;
   }
-  .page6 h2{
+  .page6 h2 {
     margin-top: 5vh;
     font-size: 3vw;
     line-height: 3vh;
   }
-  .page6 svg{
+  .page6 svg {
     width: 95vw;
   }
-  .page6 .stepDiv{
+  .page6 .stepDiv {
     padding: 0 2vw;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
   }
-  .page6 .stepDiv h2{
+  .page6 .stepDiv h2 {
     font-size: 4vw;
   }
-  .page6 .stepDiv p{
+  .page6 .stepDiv p {
     font-size: 3vw;
     padding-bottom: 1vh;
     border-bottom: 1px solid #898989;
   }
 
-
-
-  .page7{
+  .page7 {
     display: grid;
     place-items: center;
   }
-  .page7 div{
+  .page7 div {
     width: 90vw;
   }
-  .page7 h1{
+  .page7 h1 {
     font-size: 10vw;
     bottom: 5vh;
     text-align: center;
-
   }
-  .page7 h2{
+  .page7 h2 {
     top: -10vh;
     margin-top: 0;
     font-size: 4vw;
     text-align: center;
   }
 
-
-
-
-
-  .page8{
+  .page8 {
     grid-template-columns: 100% 0%;
     place-items: center;
   }
 
-  .page8 div{
+  .page8 div {
     align-items: center;
     margin: 0;
   }
-  .page8 h1{
+  .page8 h1 {
     font-size: 10vw;
     text-align: center;
   }
-  .page8 p{
+  .page8 p {
     font-size: 4vw;
     line-height: 4vh;
     text-align: center;
   }
-  .page8 button{
+  .page8 button {
     font-size: 4vw;
   }
 
-
-
-
-  .page9 p{
+  .page9 p {
     font-size: 4.8vw;
     text-align: center;
     line-height: 3.6vh;
   }
 
-  .page9 button{
+  .page9 button {
     font-size: 4vw;
   }
-  .page9 #footer p{
+  .page9 #footer p {
     font-size: 3vw;
   }
 
-  .page8 img{
+  .page8 img {
     right: -100vw;
   }
-  .cursor{
+  .cursor {
     display: none;
   }
 }

@@ -1,29 +1,20 @@
 let toggleBool = true
-document.querySelector('.right').addEventListener('click', () => {
-  console.log('Hello')
-  let menuBar = document.querySelector('.menuBar')
-  let top = document.getElementById('topStroke')
-  let mid = document.getElementById('midStroke')
-  let bottom = document.getElementById('bottomStroke')
+let cancel = document.querySelector('.cancel')
+let right = document.querySelector('.right')
 
-  if (toggleBool) {
-    menuBar.style.transform = 'translateX(0vw)'
-    mid.style.opacity = 0
+cancel.style.display = 'none'
 
-    top.classList.add('rotateTop')
-    bottom.classList.add('rotateBottom')
-
-    toggleBool = false
-  } else {
-    menuBar.style.transform = 'translateX(105vw)'
-    mid.style.opacity = 100
-
-    top.classList.remove('rotateTop')
-    bottom.classList.remove('rotateBottom')
-    toggleBool = true
-  }
+right.addEventListener('click', () => {
+  document.querySelector('.menuBar').style.transform = 'translateX(0vw)'
+  right.style.display = 'none'
+  cancel.style.display = 'block'
 })
 
+cancel.addEventListener('click', () => {
+  document.querySelector('.menuBar').style.transform = 'translateX(105vw)'
+  right.style.display = 'flex'
+  cancel.style.display = 'none'
+})
 gsap.to('#car', {
   height: '35vw',
   scrollTrigger: {
