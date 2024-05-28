@@ -410,6 +410,10 @@ nav {
     width: 7vw;
     height: 0.3vh;
   }
+  nav .cancel .stroke {
+    width: 7vw;
+    height: 0.3vh;
+  }
 
   .menu-navItems {
     font-size: 10vw;
