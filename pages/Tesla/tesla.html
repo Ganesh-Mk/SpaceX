@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="tesla.css">
+    <link rel="icon" href="/images/xLogo.png">
+    <title>SpaceX: Tesla in Space</title>
+</head>
+
+<body>
+
+    <div class="cursor">
+        <div class="cursor-circle"></div>
+    </div>
+
+    <nav id="navBar">
+        <div class="left">
+            <a href="/pages/MarsAndBeyound/index.html">
+
+                <img src="/images/SpaceXlogo.png" alt="spaceX_Logo">
+            </a>
+        </div>
+        <div class="mid">
+
+        </div>
+        <div class="right" id="menuBtn">
+            <div class="stroke" id="topStroke"></div>
+            <div class="stroke" id="midStroke"></div>
+            <div class="stroke" id="bottomStroke"></div>
+        </div>
+    </nav>
+
+    <div class="menuBar">
+        <div class="menu-mid">
+            <a href="/pages/MarsAndBeyound/index.html" id="menuItem1" class="menu-navItems">Mars & Beyond</a>
+            <a href="/pages//Falcon9/falcon9.html" id="menuItem2" class="menu-navItems">Falcon9</a>
+            <a href="/pages/Dragon/dragon.html" id="menuItem3" class="menu-navItems">Dragon</a>
+            <a href="/pages/Tesla/tesla.html" id="menuItem4" class="menu-navItems">Tesla in Space</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="page1">
+            <img id="car" src="/images/tesla.png" alt="">
+            <div>
+                <h1>TESLA IN SPACE</h1>
+                <h3>FALCON HEAVY FIRST FLIGHT</h3>
+            </div>
+        </div>
+
+        <div class="page2">
+            <div class="rocketImgContainer">
+                <div class="rocketImg"></div>
+            </div>
+            <p class="rocketP">Falcon Heavy is composed of three reusable Falcon 9 nine-engine cores whose 27 Merlin
+                engines together generate more than 5 million pounds of thrust at liftoff, equal to approximately
+                eighteen 747 aircraft. As one of the world’s most powerful operational rockets, Falcon Heavy can lift
+                nearly 64 metric tons (141,000 lbs) to orbit</p>
+        </div>
+
+        <div class="page3">
+            <div class="nums">
+                <h1 class="numsLeft num1">9</h1>
+                <h2 class="numsLeft">Falcon launches</h2>
+            </div>
+            <div class="nums">
+                <h1 class="numsCenter num2">17</h1>
+                <h2 class="numsCenter">Falcon landings</h2>
+            </div>
+            <div class="nums">
+                <h1 class="numsRight num3">14</h1>
+                <h2 class="numsRight">Falcon reflights</h2>
+            </div>
+        </div>
+
+        <div class="page4">
+            <video id="rocketVideo" src="/videos/falconHeavy.mp4" autoplay loop></video>
+            <div class="page4Box">
+                <h1>UNMATCHED PERFORMANCE</h1>
+                <p>With more than 5 million pounds of thrust at liftoff, Falcon Heavy is one of the most capable rockets
+                    flying. By comparison, the liftoff thrust of the Falcon Heavy equals approximately eighteen 747
+                    aircraft at full power. Falcon Heavy can lift the equivalent of a fully loaded 737 jetliner—complete
+                    with passengers, luggage and fuel—to orbit.</p>
+            </div>
+        </div>
+
+        <div class="page5">
+            <div class="teslaImg"></div>
+        </div>
+        <div class="page9">
+            <div class="line"></div>
+            <p>For inquiries about our TESLA IN SPACE program, contact <span> sales@spacex.com</span> </p>
+            <button class="btn">Contact us</button>
+            <div id="footer">
+                <p>SPACEX © 2023</p>
+                <p>Privacy policy</p>
+                <p>suppliers</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/pages/locoMotiveAndCursor.js"></script>
+
+    <script src="tesla.js"></script>
+</body>
+
+</html>
