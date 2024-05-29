@@ -180,6 +180,9 @@ nav {
   gap: 0.4vw;
   cursor: pointer;
 }
+.cancel {
+  cursor: pointer;
+}
 .stroke {
   transition: all 0.2s linear;
   width: 3vw;
@@ -339,6 +342,7 @@ nav {
   font-size: 15vw;
   text-shadow: 1px 1px 3px black;
   text-wrap: nowrap;
+  word-spacing: 10vw;
   text-transform: uppercase;
   position: absolute;
   left: 10vw;
@@ -395,7 +399,29 @@ nav {
   font-family: mainFontBold;
   color: rgb(189, 189, 189);
 }
+.signupBtn,
+.loginBtn {
+  text-decoration: none;
+  font-size: 1.4vw;
+  border: 0.1vw solid rgba(255, 255, 255, 0.628);
+  border-radius: 100vw;
+  font-family: mainFont;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  padding: 0.8vw 3vw;
+}
 
+.loginBtn {
+  margin-right: 2vw;
+}
+
+.signupBtn:hover {
+  border: 0.3vw solid rgba(255, 255, 255, 0.628);
+}
+.loginBtn:hover {
+  border: 0.3vw solid rgba(255, 255, 255, 0.628);
+}
 @media (max-width: 600px) {
   nav {
     padding: 3vh 8vw;
@@ -466,5 +492,10 @@ nav {
 
   .cursor {
     display: none;
+  }
+  .signupBtn,
+  .loginBtn {
+    font-size: 3.4vw;
+    padding: 2vw 4vw;
   }
 }

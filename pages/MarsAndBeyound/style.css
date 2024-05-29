@@ -188,6 +188,29 @@ nav {
   cursor: pointer;
 }
 
+.signupBtn,
+.loginBtn {
+  text-decoration: none;
+  font-size: 1.4vw;
+  border: 0.1vw solid rgba(255, 255, 255, 0.628);
+  border-radius: 100vw;
+  font-family: mainFont;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  padding: 0.8vw 3vw;
+}
+
+.loginBtn {
+  margin-right: 2vw;
+}
+
+.signupBtn:hover {
+  border: 0.3vw solid rgba(255, 255, 255, 0.628);
+}
+.loginBtn:hover {
+  border: 0.3vw solid rgba(255, 255, 255, 0.628);
+}
 .cancel {
   cursor: pointer;
 }
@@ -799,5 +822,10 @@ nav {
   }
   .cursor {
     display: none;
+  }
+  .signupBtn,
+  .loginBtn {
+    font-size: 3.4vw;
+    padding: 2vw 4vw;
   }
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <link rel="stylesheet" href="./signup.css">
+  <title>Signup</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <div class="menuBar">
+    <div class="menu-mid">
+      <div class="signupLoginContainer">
+        <a class="loginBtn" href="/pages/Login/login.html">Login</a>
+        <a class="signupBtn" href="/pages/Signup/signup.html">Signup</a>
+      </div>
+      <a href="/index.html" id="menuItem1" class="menu-navItems">Mars & Beyond</a>
+      <a href="/pages//Falcon9/falcon9.html" id="menuItem2" class="menu-navItems">Falcon9</a>
+      <a href="/pages/Dragon/dragon.html" id="menuItem3" class="menu-navItems">Dragon</a>
+      <a href="/pages/Tesla/tesla.html" id="menuItem4" class="menu-navItems">Tesla in Space</a>
+    </div>
+  </div>
+  <div class="cursor">
+    <div class="cursor-circle"></div>
+  </div>
+
+  <nav id="navBar">
+    <div class="left">
+      <a href="/index.html">
+        <img src="/images/SpaceXlogo.png" alt="spaceX_Logo">
+      </a>
+    </div>
+    <div class="mid">
+
+    </div>
+    <div class="right" id="menuBtn">
+      <div class="stroke" id="topStroke"></div>
+      <div class="stroke" id="midStroke"></div>
+      <div class="stroke" id="bottomStroke"></div>
+    </div>
+    <div class="cancel" id="menuBtn">
+      <div class="stroke rotateTop" id="topStroke"></div>
+      <div class="stroke rotateBottom" id="midStroke"></div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="form">
+      <section class="bg-stars">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+      </section>
+      <div class="form-container">
+        <p class="title">Welcome to SpaceX</p>
+        <form class="inputContainer">
+          <input type="text" class="input" placeholder="Enter Name">
+          <input type="email" class="input" placeholder="Enter Email">
+          <input type="password" class="input" placeholder="Enter Password">
+          <button class="form-btn">Sign up</button>
+        </form>
+        <p class="sign-up-label">
+          <a href="../Login/login.html" class="sign-up-label">
+            Do have an account?<span class="sign-up-link">Log in</span>
+          </a>
+        </p>
+        <div class="buttons-container">
+          <div class="google-login-button">
+
+            <span>Signup with Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/pages/locoMotiveAndCursor.js"></script>
+  <script src="./signup.js"></script>
+</body>
+
+</html>
