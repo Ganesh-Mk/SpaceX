@@ -546,4 +546,8 @@ nav {
   .cursor {
     display: none;
   }
+
+  .input {
+    font-family: sans-serif;
+  }
 }

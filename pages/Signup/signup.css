@@ -543,4 +543,7 @@ nav {
     font-size: 3.4vw;
     padding: 2vw 4vw;
   }
+  .input {
+    font-family: sans-serif;
+  }
 }
