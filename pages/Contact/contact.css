@@ -2,13 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: white;
   user-select: none;
+  color: white;
 }
 ::selection {
   background-color: transparent;
 }
-
 @font-face {
   font-family: mainFont;
   src: url(/fonts/D-DIN.ttf);
@@ -19,8 +18,12 @@
 }
 html {
   font-size: 62.5%;
-  background: rgb(19, 19, 19);
+  background: black;
   overflow-x: hidden;
+}
+
+body {
+  position: relative;
 }
 .cursor {
   position: fixed;
@@ -29,7 +32,7 @@ html {
   width: 4rem;
   height: 4rem;
   pointer-events: none;
-  z-index: 9;
+  z-index: 999;
 }
 
 .cursor-circle {
@@ -42,7 +45,6 @@ html {
   top: calc(var(--circle-size) / 2 * -1);
   left: calc(var(--circle-size) / 2 * -1);
 }
-
 .btn {
   display: inline-block;
   vertical-align: middle;
@@ -55,7 +57,6 @@ html {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-
 .btn a{
   text-decoration: none;
   color: white;
@@ -85,14 +86,6 @@ html {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.rotateTop {
-  transform: rotate(45deg);
-  transform-origin: 48%;
-}
-.rotateBottom {
-  transform: rotate(-45deg);
-  transform-origin: 40%;
-}
 .btn:hover,
 .btn:focus,
 .btn:active {
@@ -108,10 +101,6 @@ html {
 body {
   position: relative;
 }
-.menuBarContainer {
-  width: auto;
-  height: auto;
-}
 .menuBar {
   width: 100vw;
   transform: translateX(105vw);
@@ -121,6 +110,37 @@ body {
   backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
+}
+.menuBar.menu-open {
+  transform: translateX(0vw);
+}
+
+.menuBar.menu-open .mid {
+  opacity: 0;
+}
+
+.menuBar.menu-open #topStroke {
+  transform: rotate(45deg);
+}
+
+.menuBar.menu-open #bottomStroke {
+  transform: rotate(-45deg);
+}
+
+.menuBar.menu-remove {
+  transform: translateX(105vw);
+}
+
+.menuBar.menu-remove .mid {
+  opacity: 1;
+}
+
+.menuBar.menu-remove #topStroke {
+  transform: rotate(0deg);
+}
+
+.menuBar.menu-remove #bottomStroke {
+  transform: rotate(0deg);
 }
 
 .menu-mid {
@@ -193,7 +213,6 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 0.4vw;
-  /* height: 100vh; */
   cursor: pointer;
 }
 
@@ -236,6 +255,15 @@ nav {
 }
 #topStroke {
   height: 0.157vw;
+}
+
+.rotateTop {
+  transform: rotate(45deg);
+  transform-origin: 48%;
+}
+.rotateBottom {
+  transform: rotate(-45deg);
+  transform-origin: 40%;
 }
 
 .page1 {
@@ -283,273 +311,69 @@ nav {
 }
 
 .page2 {
+  height: 100vh;
   width: 100vw;
-  height: 100vh;
   display: flex;
-  padding: 0 10vw;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-direction: column;
+  position: relative;
 }
-
-.page2 img {
-  width: auto;
-  height: 100vh;
+.page2 .dragonImg {
   position: absolute;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  filter: brightness(0.8);
-  background-repeat: no-repeat;
+  z-index: 99;
+  background: url('/images/dragonPNG.png') no-repeat center/cover;
+  width: 50vw;
+  left: 0;
+  bottom: -100vh;
+  height: 50vw;
 }
-
-.page2 div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 20vh;
-}
-
-.page2 h2,
-.page2 h3 {
-  color: white;
-  letter-spacing: 0px;
+.page2 p {
+  line-height: 5vh;
+  color: rgb(193, 193, 193);
+  z-index: 5;
   font-family: mainFont;
-  line-height: 7vh;
-  text-align: center;
-  font-weight: 100;
   font-size: 2vw;
-}
-.page2 h2 {
-  margin-bottom: 10vh;
+  margin-top: 2rem;
+  width: 50%;
 }
 
 .page3 {
+  height: 70vh;
   width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  background: url('/images/mars_why.jpg') no-repeat center/cover;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  padding: 10vh 10vw;
 }
 
-.marsInfoDiv {
-  padding: 5vh 5vw;
-}
-.marsInfoDiv h1 {
-  font-family: mainFontBold;
-  font-size: 4vw;
-}
-.marsInfoDiv #marsInfoP {
-  font-family: mainFont;
-  font-size: 1.3vw;
-  line-height: 4vh;
-  margin-top: 4vh;
-}
-#marsInfoTable {
+.page3 .nums {
+  margin-top: 20vh;
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 5px;
-  align-items: center;
+  place-items: center;
 }
-#marsInfoTable p {
+
+.page3 h1 {
   font-family: mainFontBold;
-  font-size: 1.2vw;
-  margin: 1vw 0;
-  padding: 2vh 0;
-  border-bottom: 1.3px solid rgb(123, 123, 123);
+  font-size: 12vw;
 }
-#marsTableRight {
-  text-align: end;
-}
-#marsTableRight span {
-  font-size: 1.2vw;
-  color: rgb(138, 138, 138);
+.page3 h2 {
+  font-family: mainFont;
+  font-size: 2vw;
+  color: rgb(193, 193, 193);
 }
 
 .page4 {
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.page4 div {
-  display: grid;
-  place-items: center;
-  margin-bottom: 10%;
-}
-
-.page4 h1 {
-  font-size: 10vw;
-  font-family: mainFontBold;
-  position: absolute;
-}
-
-.page4 h2 {
-  font-size: 2vw;
-  font-family: mainFont;
-  letter-spacing: 1px;
-  position: absolute;
-  margin-top: 25vh;
-}
-
-.page5 {
-  width: 100vw;
-  height: 100vh;
-  background: url('/images/WebsiteStarshipStack_Render_Desktop.jpg') no-repeat
-    center/cover;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-.page5 div {
-  margin-top: 5vh;
-  padding: 10vh 5vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.page5 h1 {
-  margin: 5vh 0px;
-  font-size: 4vw;
-  font-family: mainFontBold;
-}
-.page5 p {
-  font-size: 1.4vw;
-  font-family: mainFont;
-  line-height: 5vh;
-  margin-bottom: 8vh;
-}
-.page5 button {
-  /* transition: all .3s linear; */
-  cursor: pointer;
-  text-decoration: none;
-  font-family: mainFontBold;
-  color: rgb(237, 237, 237);
-  background: transparent;
-  outline: none;
-  border-radius: 0.2rem;
-  padding: 3% 10%;
-  font-size: 1.2vw;
-  text-transform: uppercase;
-  border: 2px solid rgb(212, 212, 212);
-  /* position: absolute; */
-}
-
-.page6 {
-  width: 100vw;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 5vh 2vw;
-}
-.page6 h1 {
-  font-size: 4vw;
-  margin-top: 30vh;
-  font-family: mainFontBold;
-}
-.page6 > h2 {
-  font-size: 1.4vw;
-  font-family: mainFont;
-  line-height: 5vh;
-  margin-top: 5vh;
-  margin: 0 9vw;
-  text-align: center;
-  color: rgb(189, 189, 189);
-}
-.page6 svg {
-  width: 80vw;
-}
-
-.stepDiv {
-  display: grid;
-  grid-template-columns: 16.666% 16.666% 16.666% 16.666% 16.666% 16.666%;
-  margin: 10vh 0 30vh 0;
-}
-
-.stepDiv div {
-  margin: 0 1.2vw;
-}
-
-.stepsH1 {
-  font-size: 1.2vw;
-  font-family: mainFontBold;
-}
-.stepsP {
-  font-size: 1vw;
-  margin-top: 2vh;
-  font-family: mainFont;
-}
-
-.stepsP {
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(50px);
-}
-
-.stepsH1 {
-  cursor: pointer;
-}
-
-.stepsH1:hover + .stepsP {
-  opacity: 100;
-  transform: translateY(0px);
-}
-
-.page7 {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.page7 div {
-  width: 50vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: absolute;
-  bottom: 50vh;
-  margin-left: 5vw;
-}
-.page7 video {
-  position: absolute;
-  position: absolute;
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  filter: brightness(0.5);
-}
-
-.page7 h1 {
-  font-size: 4vw;
-  position: absolute;
-  z-index: 5;
-  font-family: mainFontBold;
-  margin-bottom: 10vh;
-}
-.page7 h2 {
-  z-index: 5;
-  position: absolute;
-  font-size: 1.4vw;
-  font-family: mainFont;
-  line-height: 5vh;
-  margin-top: 33vh;
-  text-align: start;
-  color: rgb(189, 189, 189);
-}
-
-.page8 {
+  margin-top: 40vh;
   position: relative;
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.page8 img {
+
+.page4 img {
   width: auto;
   height: 100vh;
   position: absolute;
@@ -559,27 +383,32 @@ nav {
   filter: brightness(0.5);
   background-repeat: no-repeat;
 }
-.page8 div {
+
+.page4 div {
   margin-top: 5vh;
   padding: 10vh 5vw;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
-.page8 h1 {
+
+.page4 h1 {
   margin: 5vh 0px;
   font-size: 4vw;
   font-family: mainFontBold;
+  text-align: center;
 }
-.page8 p {
+
+.page4 p {
   font-size: 1.4vw;
   font-family: mainFont;
   line-height: 5vh;
+  text-align: center;
   margin-bottom: 8vh;
 }
-.page8 button {
-  /* transition: all .3s ease-in-out; */
+
+.page4 button {
   cursor: pointer;
   text-decoration: none;
   font-family: mainFontBold;
@@ -646,11 +475,6 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .menuBarContainer {
-    height: auto;
-    width: auto;
-  }
-
   nav {
     padding: 3vh 8vw;
   }
@@ -664,12 +488,10 @@ nav {
     width: 7vw;
     height: 0.3vh;
   }
-
   nav .cancel .stroke {
     width: 7vw;
     height: 0.3vh;
   }
-
   .menu-navItems {
     font-size: 10vw;
   }
@@ -678,161 +500,6 @@ nav {
     width: 40vw;
   }
 
-  .page1 h1 {
-    font-size: 12vw;
-  }
-  .page1 h3 {
-    font-size: 3vw;
-  }
-  .page1 {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .page2 h2 {
-    font-size: 4vw;
-    line-height: 5vh;
-  }
-  .page2 h3 {
-    font-size: 4vw;
-  }
-
-  .page3 {
-    grid-template-columns: 0% 100%;
-    place-items: center;
-  }
-  .page3 h1 {
-    font-size: 12vw;
-    text-align: center;
-  }
-  .page3 #marsInfoP {
-    font-size: 3vw;
-    text-align: center;
-    margin-bottom: 5vh;
-  }
-
-  .page3 #marsTableRight p,
-  .page3 #marsTableLeft p {
-    font-size: 3vw;
-  }
-  .page4 div h2 {
-    font-size: 6vw;
-  }
-
-  #marsTableRight span {
-    font-size: 2.5vw;
-  }
-  .page5 {
-    grid-template-columns: 72% 28%;
-  }
-  .page5 div {
-    padding: 1vh 5vw;
-    align-items: center;
-  }
-  .page5 h1 {
-    font-size: 13vw;
-  }
-  .page5 p {
-    font-size: 4vw;
-    text-align: center;
-    margin-bottom: 4vh;
-  }
-  .page5 button {
-    font-size: 4vw;
-  }
-
-  .page6 h1 {
-    margin-top: 20vh;
-    font-size: 10vw;
-  }
-  .page6 h2 {
-    margin-top: 5vh;
-    font-size: 3vw;
-    line-height: 3vh;
-  }
-  .page6 svg {
-    width: 95vw;
-  }
-  .page6 .stepDiv {
-    padding: 0 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .page6 .stepDiv h2 {
-    font-size: 4vw;
-  }
-  .page6 .stepDiv p {
-    font-size: 3vw;
-    padding-bottom: 1vh;
-    border-bottom: 1px solid #898989;
-  }
-
-  .page7 {
-    display: grid;
-    place-items: center;
-  }
-  .page7 div {
-    width: 90vw;
-  }
-  .page7 h1 {
-    font-size: 10vw;
-    bottom: 5vh;
-    text-align: center;
-  }
-  .page7 h2 {
-    top: -10vh;
-    margin-top: 0;
-    font-size: 4vw;
-    text-align: center;
-  }
-
-  .page8 {
-    grid-template-columns: 100% 0%;
-    place-items: center;
-  }
-
-  .page8 div {
-    align-items: center;
-    margin: 0;
-  }
-  .page8 h1 {
-    font-size: 10vw;
-    text-align: center;
-  }
-  .page8 p {
-    font-size: 4vw;
-    line-height: 4vh;
-    text-align: center;
-  }
-  .page8 button {
-    font-size: 4vw;
-  }
-
-  .page9 p {
-    font-size: 4.8vw;
-    text-align: center;
-    line-height: 3.6vh;
-  }
-
-  .page9 button {
-    font-size: 4vw;
-  }
-  .page9 #footer p {
-    font-size: 3vw;
-  }
-
-  .page8 img {
-    right: -100vw;
-  }
   .cursor {
     display: none;
   }

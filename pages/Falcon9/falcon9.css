@@ -53,6 +53,14 @@ html {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+.btn a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover a{
+  color: black;
+}
 
 .btn:before {
   content: '';
@@ -400,6 +408,7 @@ nav {
   color: rgb(189, 189, 189);
 }
 .signupBtn,
+.contactBtn,
 .loginBtn {
   text-decoration: none;
   font-size: 1.4vw;
@@ -412,14 +421,17 @@ nav {
   padding: 0.8vw 3vw;
 }
 
-.loginBtn {
-  margin-right: 2vw;
+.signupBtn {
+  margin: 0 2vw;
 }
 
 .signupBtn:hover {
   border: 0.3vw solid rgba(255, 255, 255, 0.628);
 }
 .loginBtn:hover {
+  border: 0.3vw solid rgba(255, 255, 255, 0.628);
+}
+.contactBtn:hover {
   border: 0.3vw solid rgba(255, 255, 255, 0.628);
 }
 @media (max-width: 600px) {
@@ -494,6 +506,7 @@ nav {
     display: none;
   }
   .signupBtn,
+  .contactBtn,
   .loginBtn {
     font-size: 3.4vw;
     padding: 2vw 4vw;
