@@ -386,6 +386,13 @@ h3{
 .p3 {
     order: 3;
 }
+.p1, .p2, .p3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 5vw;
+}
   *{
     font-size: 3vw;
   }
@@ -479,9 +486,7 @@ h2{
   border-radius: 1.5vw;
   width: 100%;
 }
-#bgvid{
-  height: 100vw;
-}
+
 .about-container h2{
   margin-top: 12vw;
 }
@@ -491,6 +496,10 @@ h2{
 .form-group textarea {
   min-height: 15vw;
   resize: vertical;
+}
+
+.p1 span, .p2 span, .p3 span{
+  font-size: 3.5vw;
 }
 
 }
