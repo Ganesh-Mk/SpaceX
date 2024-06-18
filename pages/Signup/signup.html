@@ -20,9 +20,7 @@
       <div class="signupLoginContainer">
         <a class="loginBtn" href="/pages/Login/login.html">Login</a>
         <a class="signupBtn" href="/pages/Signup/signup.html">Signup</a>
-
-        <a class="contactBtn" href="../Contact/contact.html">Contact</a>
-
+        <a class="contactBtn" href="/pages/Contact/contact.html">Contact</a>
 
       </div>
       <a href="/index.html" id="menuItem1" class="menu-navItems">Mars & Beyond</a>
@@ -55,33 +53,38 @@
     </div>
   </nav>
 
-  <div class="main">
-    <div class="form">
-      <section class="bg-stars">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-      </section>
-      <div class="form-container">
-        <p class="title">Welcome to SpaceX</p>
-        <form class="inputContainer">
-          <input type="text" class="input" placeholder="Enter Name">
-          <input type="email" class="input" placeholder="Enter Email">
-          <input type="password" class="input" placeholder="Enter Password">
-          <button class="form-btn">Sign up</button>
-        </form>
-        <p class="sign-up-label">
-          <a href="../Login/login.html" class="sign-up-label">
-            Do have an account?<span class="sign-up-link">Log in</span>
-          </a>
-        </p>
-        <div class="buttons-container">
-          <div class="google-login-button">
+  <div class="video-background">
+    <video autoplay muted loop id="bgvid">
+      <source src="/videos/Flight4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-            <span>Signup with Google</span>
-          </div>
+  <div class="main">
+    <div class="content">
+      <div class="form-container">
+        <h2>Sign up</h2>
+        <p>Join the Mission: Your Gateway to the Stars Begins Here</p>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
         </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password">
+        </div>
+
+        <div class="already">
+          <a href="../Login/login.html">Already have an account? Login</a>
+        </div>
+
+        <p class="btn">Submit</p>
+      </div>
+      <div class="about-container">
       </div>
     </div>
   </div>
@@ -95,6 +98,7 @@
     integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/pages/locoMotiveAndCursor.js"></script>
+
   <script src="./signup.js"></script>
 </body>
 

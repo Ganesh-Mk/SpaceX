@@ -10,13 +10,18 @@
   <title>SpaceX: Login</title>
 </head>
 
+<style>
+
+</style>
+
 <body>
   <div class="menuBar">
     <div class="menu-mid">
       <div class="signupLoginContainer">
         <a class="loginBtn" href="/pages/Login/login.html">Login</a>
         <a class="signupBtn" href="/pages/Signup/signup.html">Signup</a>
-        <a class="contactBtn" href="../Contact/contact.html">Contact</a>
+        <a class="contactBtn" href="/pages/Contact/contact.html">Contact</a>
+
       </div>
       <a href="/index.html" id="menuItem1" class="menu-navItems">Mars & Beyond</a>
       <a href="/pages//Falcon9/falcon9.html" id="menuItem2" class="menu-navItems">Falcon9</a>
@@ -48,37 +53,34 @@
     </div>
   </nav>
 
-  <div class="main">
-    <div class="form">
-      <section class="bg-stars">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-      </section>
-      <div class="form-container">
-        <p class="title">Welcome back</p>
-        <form class="inputContainer">
-          <input type="email" class="input" placeholder="Enter Email">
-          <input type="password" class="input" placeholder="Enter Password">
-          <p class="page-link">
-            <span class="page-link-label">Forgot Password?</span>
-          </p>
-          <button class="form-btn">Log in</button>
-        </form>
-        <p class="sign-up-label">
-        </p>
-        <p class="sign-up-label">
-          <a href="../Signup/signup.html" class="sign-up-label">
-            Don't have an account?<span class="sign-up-link">Sign up </span>
-          </a>
-        </p>
-        <div class="buttons-container">
-          <div class="google-login-button">
+  <div class="video-background">
+    <video autoplay muted loop id="bgvid">
+      <source src="/videos/Flight4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-            <span>Log in with Google</span>
-          </div>
+  <div class="main">
+    <div class="content">
+      <div class="form-container">
+        <h2>Log in</h2>
+        <p>Welcome Back to Your SpaceX Journey: Log In and Launch</p>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
         </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="already">
+          <a href="../Signup/signup.html">Not have an account? Signup</a>
+        </div>
+
+        <p class="btn">Submit</p>
+      </div>
+      <div class="about-container">
       </div>
     </div>
   </div>
@@ -92,6 +94,7 @@
     integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/pages/locoMotiveAndCursor.js"></script>
+
   <script src="./login.js"></script>
 </body>
 

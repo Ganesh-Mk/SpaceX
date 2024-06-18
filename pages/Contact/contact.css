@@ -281,7 +281,7 @@ nav {
 #bgvid {
   position: absolute;
   top: 0;
-  filter: brightness(0.2);
+  filter: brightness(0.3);
   left: 0;
   width: 100%;
   height: 100%;
@@ -296,6 +296,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
 }
+
 
 h2 {
   font-size: 4vw;
@@ -346,11 +347,6 @@ p {
 
 }
 
-.team-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
 
 .about-para{
   margin-bottom: 4vw;
@@ -362,10 +358,34 @@ h3{
   margin-bottom: 1vw;
   font-family: mainFontBold;
 }
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.p1, .p2, .p3 {
+  flex: 1;
+}
+
+
 @media (max-width: 900px) {
   .content{
     grid-template-columns: 1fr;
   }
+  .p1 {
+    order: 2;
+}
+
+.p2 {
+    order: 1;
+}
+
+.p3 {
+    order: 3;
+}
   *{
     font-size: 3vw;
   }
