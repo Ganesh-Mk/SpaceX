@@ -12,22 +12,25 @@ menuItems.forEach((menuItem, index) => {
 });
 
 let toggleBool = true;
-let cancel = document.querySelector(".cancel");
-let right = document.querySelector(".right");
+let topStroke = document.querySelector("#topStroke");
+let midStroke = document.querySelector("#midStroke");
+let bottomStroke = document.querySelector("#bottomStroke");
 
-cancel.style.display = "none";
-
-right.addEventListener("click", () => {
-  document.querySelector(".menuBar").style.transform = "translateX(0vw)";
-  right.style.display = "none";
-  cancel.style.display = "block";
-});
-
-cancel.addEventListener("click", () => {
-  document.querySelector(".menuBar").style.transform = "translateX(105vw)";
-  right.style.display = "flex";
-  cancel.style.display = "none";
-});
+function toggle() {
+  if (toggleBool) {
+    document.querySelector(".menuBar").style.transform = "translateX(0vw)";
+    topStroke.style.transform = "rotate(45deg)";
+    midStroke.style.opacity = "0";
+    bottomStroke.style.transform = "rotate(-45deg)";
+    toggleBool = false;
+  } else {
+    document.querySelector(".menuBar").style.transform = "translateX(105vw)";
+    topStroke.style.transform = "rotate(0deg)";
+    midStroke.style.opacity = "1";
+    bottomStroke.style.transform = "rotate(0deg)";
+    toggleBool = true;
+  }
+}
 
 let menuBtn = document.querySelector("#menuBtn");
 menuBtn.addEventListener("mouseover", () => {

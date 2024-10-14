@@ -192,8 +192,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4vw;
-  /* height: 100vh; */
+  gap: 0.3vw;
   cursor: pointer;
 }
 
@@ -234,9 +233,7 @@ nav {
   background: #e9e9e9;
   z-index: 150;
 }
-#topStroke {
-  height: 0.157vw;
-}
+
 
 .page1 {
   position: relative;
@@ -842,4 +839,11 @@ nav {
     font-size: 3.4vw;
     padding: 2vw 4vw;
   }
+}
+
+#topStroke {
+  transform-origin: 20% !important;
+}
+#bottomStroke {
+  transform-origin: 20% !important;
 }

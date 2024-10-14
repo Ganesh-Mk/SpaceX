@@ -186,7 +186,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4vw;
+  gap: 0.3vw;
   cursor: pointer;
 }
 .signupBtn,
@@ -227,7 +227,10 @@ nav {
   z-index: 150;
 }
 #topStroke {
-  height: 0.157vw;
+  transform-origin: 20% !important;
+}
+#bottomStroke {
+  transform-origin: 20% !important;
 }
 
 .page1 {
@@ -244,8 +247,14 @@ nav {
 }
 .page1 #car {
   position: absolute;
-  height: 10vw;
+  height: 20vw;
   bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .page1 #car {
+    height: 50vw;
+  }
 }
 .page1 img {
   position: absolute;
